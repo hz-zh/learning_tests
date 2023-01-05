@@ -14,6 +14,7 @@
 <body>
 
   <input class="numberInput" type="text">
+  <button id="submit" style="font-size: 32px;">Submit</button>
   <p></p>
 
   <script>
@@ -38,7 +39,16 @@ function factorial(num) {
   }
   return num;
 }
-input.addEventListener("change", () => {
+
+function squareRoot(num) {
+   if (num < 1) return undefined;
+   return num ** 0.5;
+}
+
+document.getElementById("submit").addEventListener("click", printAnswer);
+input.addEventListener("change", printAnswer);
+
+function printAnswer() {
   const num = parseFloat(input.value);
   if (isNaN(num)) {
     para.textContent = "You need to enter a number!";
@@ -46,8 +56,9 @@ input.addEventListener("change", () => {
     para.textContent = `${num} squared is ${squared(num)}. `;
     para.textContent += `${num} cubed is ${cubed(num)}. `;
     para.textContent += `${num} factorial is ${factorial(num)}. `;
+    para.textContent += `The square root of ${num} is ${squareRoot(num)}.`
   }
-});
+};
 
 
   </script>

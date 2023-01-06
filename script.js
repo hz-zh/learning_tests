@@ -2,9 +2,23 @@
 const mainInput = document.querySelector('.numberInput');
 const multInput1 = document.querySelector('.multInput1');
 const multInput2 = document.querySelector('.multInput2');
+const stringInput = document.querySelector(".stringInput")
 
 document.getElementById("add").addEventListener("click", add7);
 document.getElementById("mult").addEventListener("click", mult);
+document.getElementById("capital").addEventListener("click", capitalize);
+document.getElementById("lastLetter").addEventListener("click", lastLetter);
+
+
+function capitalize() {
+   const str = stringInput.value;
+   printString(str.charAt(0).toUpperCase() + str.slice(1));
+}
+
+function lastLetter() {
+   const str = stringInput.value;
+   printString(str.charAt(str.length-1));
+}
 
 function add7() { 
    let num = parseFloat(mainInput.value);
@@ -31,6 +45,10 @@ function printMain(output){
 function printMult(output){
    const multPara = document.querySelector('#multResult');
    multPara.textContent = `Result: ${output}`; 
+   }
+function printString(output){
+   const stringPara = document.querySelector('#stringResult');
+   stringPara.textContent = `Result: ${output}`; 
    }
 
 function checkNum(num) {

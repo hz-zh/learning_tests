@@ -1,22 +1,26 @@
 
-const input = document.querySelector('.numberInput');
-const para = document.querySelector('p');
+const mainInput = document.querySelector('.numberInput');
+const para = document.querySelector('#result');
 
 document.getElementById("add").addEventListener("click", add7);
-/*document.getElementById("mult").addEventListener("click", print);*/
+document.getElementById("mult").addEventListener("click", mult);
 
 function add7() { 
-   let num = parseFloat(input.value);
-   if ( checkNum(parseFloat(input.value)) != undefined )
-      { sum = num + 7;
-         console.log(num);
-         print(sum); }
+   let num = parseFloat(mainInput.value);
+   if ( checkNum(parseFloat(mainInput.value)) != undefined )
+      {
+         print(num + 7); }
 }
 
-/*let mult = (num) => num*num;*/
+function mult() {
+   let num = mainInput.value.split("*");
+   if ( checkNum(parseFloat(mainInput.value)) != undefined ) {
+      print(num[0]*num[1]);
+   }
+}
 
 function print(output){
-   para.textContent = output; 
+   para.textContent = `Result: ${output}`; 
    }
 
 function checkNum(num) {
@@ -36,7 +40,7 @@ function squared(num) {
 
 function squareNum()
 {
-   const num = parseFloat(input.value);
+   const num = parseFloat(mainInput.value);
    para.textContent = `${num} squared is ${squared(num)}.`;
 }
 */

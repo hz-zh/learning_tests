@@ -2,16 +2,21 @@
 const input = document.querySelector('.numberInput');
 const para = document.querySelector('p');
 
-document.getElementById("square").addEventListener("click", print);
-input.addEventListener("change", print);
+document.getElementById("add").addEventListener("click", add7);
+/*document.getElementById("mult").addEventListener("click", print);*/
 
-function add7(num) { 
-  return num + 7;}
-
-function print(){
-   num = parseFloat(input.float);
+function add7() { 
+   let num = parseFloat(input.value);
    if ( checkNum(parseFloat(input.value)) != undefined )
-      { para.textContent = `${add7(checkNum(parseFloat(input.value)))}`; }
+      { sum = num + 7;
+         console.log(num);
+         print(sum); }
+}
+
+/*let mult = (num) => num*num;*/
+
+function print(output){
+   para.textContent = output; 
    }
 
 function checkNum(num) {

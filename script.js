@@ -2,22 +2,23 @@
 const mainInput = document.querySelector('.numberInput');
 const multInput1 = document.querySelector('.multInput1');
 const multInput2 = document.querySelector('.multInput2');
-const stringInput = document.querySelector(".stringInput")
+const capitalInput = document.querySelector(".capitalInput");
+const lastInput = document.querySelector(".lastInput")
 
 document.getElementById("add").addEventListener("click", add7);
 document.getElementById("mult").addEventListener("click", mult);
-document.getElementById("capital").addEventListener("click", capitalize);
-document.getElementById("lastLetter").addEventListener("click", lastLetter);
+document.addEventListener("keyup", capitalize);
+document.addEventListener("keyup", lastLetter);
 
 
 function capitalize() {
-   const str = stringInput.value;
-   printString(str.charAt(0).toUpperCase() + str.slice(1));
+   const str = capitalInput.value;
+   printCapital(str.charAt(0).toUpperCase() + str.slice(1));
 }
 
 function lastLetter() {
-   const str = stringInput.value;
-   printString(str.charAt(str.length-1));
+   const str = lastInput.value;
+   printLast(str.charAt(str.length-1));
 }
 
 function add7() { 
@@ -46,10 +47,15 @@ function printMult(output){
    const multPara = document.querySelector('#multResult');
    multPara.textContent = `Result: ${output}`; 
    }
-function printString(output){
-   const stringPara = document.querySelector('#stringResult');
+function printCapital(output){
+   const stringPara = document.querySelector('#capitalResult');
    stringPara.textContent = `Result: ${output}`; 
    }
+function printLast(output){
+   const stringPara = document.querySelector('#lastResult');
+   stringPara.textContent = `Result: ${output}`; 
+   }
+
 
 function checkNum(num) {
    if (isNaN(num)) {

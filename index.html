@@ -14,53 +14,10 @@
 <body>
 
   <input class="numberInput" type="text">
-  <button id="submit" style="font-size: 32px;">Submit</button>
+  <button id="square" style="font-size: 32px;">Square It!</button>
   <p></p>
 
-  <script>
-    const input = document.querySelector('.numberInput');
-    const para = document.querySelector('p');
-
-    function squared(num) {
-  return num * num;
-}
-
-function cubed(num) {
-  return num * num * num;
-}
-
-function factorial(num) {
-  if (num < 0) return undefined;
-  if (num === 0) return 1;
-  let x = num - 1;
-  while (x > 1) {
-    num *= x;
-    x--;
-  }
-  return num;
-}
-
-function squareRoot(num) {
-   if (num < 1) return undefined;
-   return num ** 0.5;
-}
-
-document.getElementById("submit").addEventListener("click", printAnswer);
-input.addEventListener("change", printAnswer);
-
-function printAnswer() {
-  const num = parseFloat(input.value);
-  if (isNaN(num)) {
-    para.textContent = "You need to enter a number!";
-  } else {
-    para.textContent = `${num} squared is ${squared(num)}. `;
-    para.textContent += `${num} cubed is ${cubed(num)}. `;
-    para.textContent += `${num} factorial is ${factorial(num)}. `;
-    para.textContent += `The square root of ${num} is ${squareRoot(num)}.`
-  }
-};
-
-
-  </script>
+  <script src="script.js"></script>
+  
 </body>
 </html>

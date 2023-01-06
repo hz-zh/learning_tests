@@ -1,6 +1,7 @@
 
 const mainInput = document.querySelector('.numberInput');
-const para = document.querySelector('#result');
+const multInput1 = document.querySelector('.multInput1');
+const multInput2 = document.querySelector('.multInput2');
 
 document.getElementById("add").addEventListener("click", add7);
 document.getElementById("mult").addEventListener("click", mult);
@@ -9,23 +10,33 @@ function add7() {
    let num = parseFloat(mainInput.value);
    if ( checkNum(parseFloat(mainInput.value)) != undefined )
       {
-         print(num + 7); }
+         printMain(num + 7); }
 }
 
 function mult() {
-   let num = mainInput.value.split("*");
-   if ( checkNum(parseFloat(mainInput.value)) != undefined ) {
-      print(num[0]*num[1]);
+   let num1 = multInput1.value;
+   let num2 = multInput2.value;
+
+   if ( checkNum(parseFloat(multInput1.value)) != undefined && 
+   checkNum(parseFloat(multInput2.value)) != undefined ) 
+   {
+      printMult(num1*num2);
    }
 }
 
-function print(output){
-   para.textContent = `Result: ${output}`; 
+function printMain(output){
+   const mainPara = document.querySelector('#mainResult');
+   mainPara.textContent = `Result: ${output}`; 
+   }
+function printMult(output){
+   const multPara = document.querySelector('#multResult');
+   multPara.textContent = `Result: ${output}`; 
    }
 
 function checkNum(num) {
    if (isNaN(num)) {
-      para.textContent = "You need to enter a number!";
+      printMain("You need to enter a number!");
+      printMult("You need to enter a number!");
       } 
    else if (!isNaN(num)){ 
          return num;

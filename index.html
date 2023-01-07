@@ -3,34 +3,50 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles.css">
     <title>Function library example</title>
-  <style>
-    input {
-      font-size: 2em;
-      margin: 10px 1px 0;
-      max-width: 100px;
-    }
-  </style>
   </head>
 <body>
+   <div class="header">
+      <h2>Multi-function Calculator</h2>
+      <div class="list">
+         <li>Add 7 to any number</li>
+         <p id="divider">|</p>
+         <li>Multiply two numbers</li>
+         <p id="divider">|</p>
+         <li>Capitalize the first letter of any word</li>
+         <p id="divider">|</p>
+         <li>Get the last letter of any word or sentence</li>
+      </div> 
+   </div>
 
-  <input class="numberInput" type="text">
-  <button id="add" style="font-size: 32px;">ADD 7!</button>
-  <br>
-  <p id="mainResult"></p>
-  <input class="multInput1" type="text">
-  <p>*</p>
-  <input class="multInput2" type="text">
-  <button id="mult" style="font-size: 32px;">MULIPLY!</button>
-  <p id="multResult"></p>
-  <br>
-  <input class="capitalInput"></input>
-  <p id="capitalResult"></p>
-  <input class="lastInput"></input>
-  <p id="lastResult"></p>
+  <div class="adder" >
+      <input class="numberInput" type="text" onfocus="this.value = ''">
+      <button id="add" style="font-size: 32px;">ADD 7!</button>
+      <p id="mainResult"></p>
+   </div>
 
+   <div class="multiplyer">
+      <input class="multInput1" type="text" onfocus="this.value = ''">
+      <p id="asterisk">*</p>
+      <input class="multInput2" type="text" onfocus="this.value = ''">
+      <button id="mult" style="font-size: 32px;">MULTIPLY!</button>
+      <p id="multResult"></p>
+   </div>
 
-  <script src="script.js"></script>
+   <div class="capitalize">
+      <p class="stringParas">Capitalize first letter!</p>
+      <input class="capitalInput" onfocus="this.value = ''"></input>
+      <p id="capitalResult"></p>
+   </div>
+
+   <div class="lastLetter">
+      <p class="stringParas">Get last letter!</p>
+      <input class="lastInput" onfocus="this.value = ''"></input>
+      <p id="lastResult"></p>
+   </div>
+
+   <script src="script.js"></script>
   
 </body>
 </html>

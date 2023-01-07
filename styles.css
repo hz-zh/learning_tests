@@ -1,0 +1,129 @@
+body {
+   display: flex;
+   flex: 1;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-color: rgb(54, 57, 135);
+   gap: 20px;
+   margin: 0px;
+}
+
+.header {
+   display: flex;
+   background-color: rgb(17, 18, 55);
+   flex-direction: column;
+   align-items: center;
+   align-self: stretch;
+   flex: 1;
+   gap: 16px;
+   padding: 16px;
+   color: rgb(233, 203, 170);
+}
+
+.list {
+   display: flex;
+   flex-wrap: nowrap;
+   align-items: center;
+   justify-content: center;
+   gap: 16px;
+   padding-bottom: 16px;
+   list-style: none;
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   letter-spacing: 1px;
+   text-align: center;
+}
+
+#divider {
+   font-size: 60px;
+   margin: 0px;
+}
+
+.adder {
+   background-color: rgb(28, 31, 124);
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   flex: 1;
+   gap: 16px;
+   padding: 40px;
+   border: rgb(23, 24, 61) groove 12px;
+   border-radius: 12px;
+   
+}
+
+.multiplyer {
+   background-color: rgb(28, 31, 124);
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   gap: 16px;
+   padding: 40px;
+   border: rgb(23, 24, 61) groove 12px;
+   border-radius: 12px;
+}
+
+.capitalize {
+   background-color: rgb(28, 31, 124);
+   display: flex;
+   flex: 1;
+   align-items: center;
+   flex-direction: column;
+   gap: 16px;
+   padding: 40px;
+   border: rgb(23, 24, 61) groove 12px;
+   border-radius: 12px;
+}
+
+.lastLetter {
+   background-color: rgb(28, 31, 124);
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   gap: 16px;
+   padding: 40px;
+   border: rgb(23, 24, 61) groove 12px;
+   border-radius: 12px;
+}
+
+.stringParas {
+   margin-top: -20px;
+   margin-bottom: 0px;
+}
+
+#capitalResult {
+   display: flex;
+   flex-wrap: wrap;
+   white-space: initial;
+   min-width: 0;
+}
+#asterisk {
+   color: rgb(233, 203, 170);
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   font-size: 60px;
+   margin: 0px 0px -30px;
+}
+input {
+   display: flex;
+   flex-basis: 40px;
+   font-size: 35px;
+   background-color: rgb(233, 203, 170);
+   border: solid burlywood;
+   border-radius: 8px;
+   flex-wrap: wrap;
+}
+p {
+   color: rgb(233, 203, 170);
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   letter-spacing: 1px;
+   font-size: 24px;
+   margin-bottom: 0px;
+   text-overflow: ellipsis;
+}
+button {
+   color: rgb(37, 30, 22);
+   background-color: rgb(233, 203, 170);
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   letter-spacing: 1px;
+   font-size: 24px;
+}
